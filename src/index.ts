@@ -1,0 +1,15 @@
+/*
+ * Hexabot — Fair Core License (FCL-1.0-ALv2)
+ * Copyright (c) 2026 Hexastack.
+ * Full terms: see LICENSE.md.
+ */
+
+export { default, default as PgvectorRagHelper } from './index.helper';
+
+export * from './pgvector.settings';
+
+export * from './pgvector.provisioning';
+
+export * from './pgvector.store';
+
+export * from './pgvector.legacy-migration';
