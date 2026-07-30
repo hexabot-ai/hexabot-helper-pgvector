@@ -113,9 +113,9 @@ export class PgvectorStore extends ContentSearchStore {
 
     return Boolean(
       state?.hasVector &&
-        state?.hasDocuments &&
-        state?.hasChunks &&
-        state?.hasJobs,
+      state?.hasDocuments &&
+      state?.hasChunks &&
+      state?.hasJobs,
     );
   }
 

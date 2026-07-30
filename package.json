@@ -4,6 +4,25 @@
   "description": "PostgreSQL pgvector semantic RAG helper extension for Hexabot v3.",
   "author": "Hexastack",
   "license": "FCL-1.0-ALv2",
+  "homepage": "https://hexabot.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexabot-ai/hexabot-helper-pgvector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hexabot-ai/hexabot-helper-pgvector/issues"
+  },
+  "keywords": [
+    "hexabot",
+    "hexabot-extension",
+    "hexabot-helper",
+    "chatbot",
+    "rag",
+    "pgvector",
+    "postgres",
+    "embeddings",
+    "semantic-search"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -27,14 +46,17 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "build:publish": "pnpm run clean && pnpm run build && pnpm run check:dist",
+    "build:publish": "npm run clean && npm run build && npm run check:dist",
     "check:dist": "test -f dist/index.js && test -f dist/index.helper.js",
     "clean": "rimraf dist coverage",
-    "lint": "eslint \"src/**/*.ts\"",
-    "lint:fix": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" \"jest.config.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" \"jest.config.ts\" --fix",
+    "prepublishOnly": "npm run build:publish",
+    "release:patch": "npm version patch && git push origin main --tags",
+    "release:minor": "npm version minor && git push origin main --tags",
     "test": "jest --config jest.config.ts",
-    "typecheck": "tsc --noEmit -p tsconfig.json",
-    "prepublishOnly": "pnpm run build:publish"
+    "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "peerDependencies": {
     "@hexabot-ai/api": ">=3.4.0 <4",
@@ -49,10 +71,10 @@
     "@ai-sdk/openai": "^3.0.7",
     "@ai-sdk/openai-compatible": "^2.0.48",
     "@eslint/eslintrc": "^3.3.1",
-    "@hexabot-ai/api": "workspace:*",
-    "@hexabot-ai/types": "workspace:*",
-    "@nestjs/common": "^11.1.19",
-    "@nestjs/core": "^11.1.19",
+    "@hexabot-ai/api": ">=3.4.0 <4",
+    "@hexabot-ai/types": ">=3.1.4 <4",
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
     "@nestjs/event-emitter": "^3.1.0",
     "@swc/core": "^1.15.32",
     "@swc/jest": "^0.2.39",

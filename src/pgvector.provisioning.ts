@@ -49,10 +49,10 @@ export async function isPgvectorProvisioned(
 
   return Boolean(
     state?.hasVector &&
-      state?.hasDocuments &&
-      state?.hasChunks &&
-      state?.hasJobs &&
-      state?.hasTrigger,
+    state?.hasDocuments &&
+    state?.hasChunks &&
+    state?.hasJobs &&
+    state?.hasTrigger,
   );
 }
 

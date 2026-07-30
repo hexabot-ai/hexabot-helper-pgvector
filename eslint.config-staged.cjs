@@ -1,10 +1,3 @@
-const baseConfig = require('./eslint.config.cjs');
+const base = require('./eslint.config.cjs');
 
-const createConfig =
-  typeof baseConfig.createConfig === 'function'
-    ? baseConfig.createConfig
-    : () => baseConfig;
-
-module.exports = createConfig({
-  headerYear: String(new Date().getFullYear()),
-});
+module.exports = base.createConfig({ headerYear: '2026' });

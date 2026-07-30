@@ -31,7 +31,12 @@ const createConfig = ({ headerYear = '2026' } = {}) => {
 
   return [
     {
-      ignores: ['dist', 'eslint.config.cjs', 'eslint.config-staged.cjs'],
+      ignores: [
+        'dist',
+        'coverage',
+        'eslint.config.cjs',
+        'eslint.config-staged.cjs',
+      ],
     },
     ...compat.extends(
       'plugin:@typescript-eslint/recommended',
@@ -48,6 +53,7 @@ const createConfig = ({ headerYear = '2026' } = {}) => {
         },
         globals: {
           ...globals.node,
+          ...globals.jest,
           fetch: 'readonly',
         },
       },

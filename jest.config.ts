@@ -7,9 +7,12 @@
 import type { Config } from 'jest';
 
 const config: Config = {
-  moduleFileExtensions: ['js', 'json', 'ts'],
-  rootDir: 'src',
-  testRegex: '.*\\.spec\\.ts$',
+  rootDir: '.',
+  testEnvironment: 'node',
+  testMatch: ['<rootDir>/src/**/*.spec.ts'],
+  moduleFileExtensions: ['ts', 'js', 'json'],
+  collectCoverageFrom: ['src/**/*.ts'],
+  coverageDirectory: 'coverage',
   transform: {
     '^.+\\.(t|j)s$': [
       '@swc/jest',
@@ -35,9 +38,6 @@ const config: Config = {
       },
     ],
   },
-  collectCoverageFrom: ['**/*.(t|j)s'],
-  coverageDirectory: '../coverage',
-  testEnvironment: 'node',
 };
 
 export default config;
