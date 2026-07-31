@@ -1,6 +1,6 @@
 {
   "name": "hexabot-helper-pgvector",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "PostgreSQL pgvector semantic RAG helper extension for Hexabot v3.",
   "author": "Hexastack",
   "license": "FCL-1.0-ALv2",
