@@ -59,7 +59,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "peerDependencies": {
-    "@hexabot-ai/api": ">=3.4.0-beta.0 <4",
+    "@hexabot-ai/api": ">=3.4.0 <4",
     "@hexabot-ai/types": ">=3.1.4 <4",
     "@nestjs/common": "^11.1.6",
     "@nestjs/core": "^11.1.6",
@@ -71,7 +71,7 @@
     "@ai-sdk/openai": "^3.0.7",
     "@ai-sdk/openai-compatible": "^2.0.48",
     "@eslint/eslintrc": "^3.3.1",
-    "@hexabot-ai/api": ">=3.4.0-beta.0 <4",
+    "@hexabot-ai/api": ">=3.4.0 <4",
     "@hexabot-ai/types": ">=3.1.4 <4",
     "@nestjs/common": "^11.1.6",
     "@nestjs/core": "^11.1.6",
